@@ -1,7 +1,7 @@
 # 32-bit_CPU_Verilog_project
 This repository represents my journey of building a 32-bit RISC-V CPU from scratch. As a beginner in CPU design, I followed a step-by-step approach inspired by the amazing workshop hosted by Whyrd, which provided invaluable guidance throughout the process.
 
-[here](./imem.v) 
+
 
 The files I wrote and its dependencies are as described in the below diagram (top-down approach)
 
@@ -26,7 +26,7 @@ datapath.v-->flop.v;
 datapath.v-->adder.v;
 
 ```
-
+the testbench files are as follows  [ALUTEST](./ALUTEST.txt),[ALUTEST2](./aluTest2.v) , [ExtenderTesst](./extendertest.txt) for individual components and [testbench](./testbench.sv) for entire CPU testing
 ## CPU Instruction Set
 As a first project, this CPU design supports a basic set of instructions:
 
