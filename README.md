@@ -1,6 +1,7 @@
 # 32-bit_CPU_Verilog_project
 This repository represents my journey of building a 32-bit RISC-V CPU from scratch. As a beginner in CPU design, I followed a step-by-step approach inspired by the amazing workshop hosted by Whyrd, which provided invaluable guidance throughout the process.
-Here is a simple flow chart:
+
+The files I wrote and its dependencies are as described in the below diagram (top-down approach)
 
 ```mermaid
 graph TD;
@@ -10,8 +11,10 @@ Top.v-->dmem.v;
 CPU.v-->decoder.v;
 CPU.v-->condlogic.v;
 condlogic.v-->floper.v;
+imem.v-->memory.dat;
 
-    CPU.v-->controller.v;
+
+CPU.v-->controller.v;
 CPU.v-->datapath.v;
 datapath.v-->extender.v;
 datapath.v-->alu.v;
@@ -19,7 +22,7 @@ datapath.v-->regfile.v;
 datapath.v-->mux.v;
 datapath.v-->flop.v;
 datapath.v-->adder.v;
-    C-->D;
+
 ```
 
 ## CPU Instruction Set
