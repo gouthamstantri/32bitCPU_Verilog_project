@@ -1,5 +1,7 @@
 # 32-bit_CPU_Verilog_project
-This repository represents my journey of building a 32-bit RISC-V CPU from scratch. As a beginner in CPU design, I followed a step-by-step approach inspired by the amazing workshop hosted by Whyrd, which provided invaluable guidance throughout the process.
+This repository represents my journey of building a 32-bit RISC-V CPU from scratch. As a beginner in CPU design, I followed a step-by-step approach inspired by the amazing workshop hosted by Whyrd, which provided invaluable guidance throughout the process.https://raw.githubusercontent.com/gouthamstantri/32bitCPU_Verilog_project/refs/heads/main/ALUTEST.txt
+## GST.v File
+Click [here](process.https://raw.githubusercontent.com/gouthamstantri/32bitCPU_Verilog_project/refs/heads/main/ALUTEST.txt) to view the content of `gst.v`.
 
 The files I wrote and its dependencies are as described in the below diagram (top-down approach)
 
