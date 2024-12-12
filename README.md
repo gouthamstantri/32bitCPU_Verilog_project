@@ -4,7 +4,7 @@ Here is a simple flow chart:
 
 ```mermaid
 graph TD;
-    A-->B;
+Top.v-->CPU.v;
     A-->C;
     B-->D;
     C-->D;
