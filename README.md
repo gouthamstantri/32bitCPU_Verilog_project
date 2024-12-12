@@ -8,7 +8,8 @@ Top.v-->CPU.v;
 Top.v-->imem.v;
 Top.v-->dmem.v;
 
-    CPU.v-->C;
+    CPU.v-->controller.v;
+CPU.v-->datapath.v;
     B-->D;
     C-->D;
 ```
