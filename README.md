@@ -7,10 +7,18 @@ graph TD;
 Top.v-->CPU.v;
 Top.v-->imem.v;
 Top.v-->dmem.v;
+CPU.v-->decoder.v;
+CPU.v-->condlogic.v;
+condlogic.v-->floper.v;
 
     CPU.v-->controller.v;
 CPU.v-->datapath.v;
-    B-->D;
+datapath.v-->extender.v;
+datapath.v-->alu.v;
+datapath.v-->regfile.v;
+datapath.v-->mux.v;
+datapath.v-->flop.v;
+datapath.v-->adder.v;
     C-->D;
 ```
 
