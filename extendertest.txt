@@ -1,0 +1,46 @@
+`include "extender.v"
+
+module test;
+  // Declare inputs and outputs
+  reg [23:0] instr;
+  reg [1:0] immsrc;
+  wire [31:0] Extim;
+
+  // Instantiate the extender module
+  extender f (
+    .instr(instr),
+    .immsrc(immsrc),
+    .Extim(Extim)
+  );
+
+  // Clock signal (not used in design, but included as example)
+  reg clk;
+
+  // Clock generation
+  initial begin
+    clk = 1'b0;
+    forever #5 clk = ~clk; // Toggle every 5 time units
+  end
+
+  // Test stimuli
+  initial begin
+    instr = 24'h010009;        // Assign 24-bit value
+    immsrc = 2'b00;        // Select immediate source
+    #10 ;   // Assign new value to instr
+        immsrc = 2'b01;    // Change immsrc
+    #10 
+       immsrc = 2'b10;    // Sign-extend and shift case
+    #10 
+        immsrc = 2'b00;    // Sign-extend and shift case
+    #10 
+        immsrc = 2'b11;    // Sign-extend and shift case
+    #30 $finish;
+  end
+
+  // Monitor signals
+  initial begin
+    $monitor($time, " instr=%h, immsrc=%b, Extim=%h", instr, immsrc, Extim);
+    $dumpfile("extender.vcd"); // Dump waveforms to a file
+    $dumpvars(0, test);        // Dump all variables in the testbench
+  end
+endmodule

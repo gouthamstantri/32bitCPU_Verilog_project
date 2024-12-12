@@ -1,0 +1,48 @@
+`include "alu.v"
+
+module test;
+  // Input and Output Declarations
+  reg  [31:0] SrcA, SrcB;           
+  reg  [1:0] ALUControl;
+  wire [31:0] ALUResult; // Should be wire to connect to the module
+  wire Zero, Negative, Overflow, Carry; 
+  
+  reg clk;
+
+  // Instantiating the ALU module
+  ALU A (
+    .SrcA(SrcA),
+    .SrcB(SrcB),
+    .ALUControl(ALUControl),
+    .ALUResult(ALUResult),
+    .Zero(Zero),
+    .Negative(Negative),
+    .Overflow(Overflow),
+    .Carry(Carry)
+  );
+  
+  // Clock Generation
+  initial begin
+    clk = 1'b0;
+    #300 $finish;
+  end
+  always #5 clk = ~clk;
+
+  // Test Scenarios
+  initial begin
+    SrcA = 32'h00000006;
+    SrcB = 32'h00000005;
+    ALUControl = 2'b00; // Add operation
+    #10 ALUControl = 2'b01; // Sub operation
+    #10 ALUControl = 2'b10; // AND operation
+    #10 ALUControl = 2'b11; // OR operation
+  end
+
+  // Monitor Outputs
+  initial begin
+    $monitor($time, " ALUResult: %h, SrcA: %h, SrcB: %h, Zero: %b, Negative: %b, Overflow: %b, Carry: %b", 
+             ALUResult, SrcA, SrcB, Zero, Negative, Overflow, Carry);
+    $dumpfile("alu.vcd");
+    $dumpvars(1, test);
+  end
+endmodule
