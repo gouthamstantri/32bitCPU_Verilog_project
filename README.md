@@ -87,14 +87,7 @@ To ensure reliability, I tested each module independently:
 
 ---
 
-## References
-This project and its test code were inspired by **"Digital Design and Computer Architecture: RISC-V Edition"** by David Harris and Sarah Harris. The book served as an excellent reference throughout the project.
-
-![Book Reference](https://github.com/user-attachments/assets/example-book-cover.jpg)
-
----
-
 ## Acknowledgment
-This project was made possible thanks to the workshop hosted by Whyrd and the guidance provided by **Rajdeep Mazumder**. Their expertise and resources helped me gain a deeper understanding of CPU design and motivated me throughout this journey.
+This project was made possible thanks to the workshop hosted by Whyrd and the guidance provided by **Rajdeep Mazumder**. Their expertise and resources helped me better understand CPU design and motivated me throughout this journey. 
 
-Workshop Link: [Build RISC-V CPU from Scratch with Verilog](https://example.com)
+
