@@ -5,7 +5,10 @@ Here is a simple flow chart:
 ```mermaid
 graph TD;
 Top.v-->CPU.v;
-    A-->C;
+Top.v-->imem.v;
+Top.v-->dmem.v;
+
+    CPU.v-->C;
     B-->D;
     C-->D;
 ```
