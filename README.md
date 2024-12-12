@@ -1,5 +1,14 @@
 # 32-bit_CPU_Verilog_project
 This repository represents my journey of building a 32-bit RISC-V CPU from scratch. As a beginner in CPU design, I followed a step-by-step approach inspired by the amazing workshop hosted by Whyrd, which provided invaluable guidance throughout the process.
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 ## CPU Instruction Set
 As a first project, this CPU design supports a basic set of instructions:
